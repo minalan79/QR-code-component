@@ -1,0 +1,130 @@
+:root {
+  --clr-primary-400: hsl(218, 44%, 22%);
+  --clr-primary-300: hsl(220, 15%, 55%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-900: hsl(212, 45%, 89%);
+  --clr-neutral-800: hsl(211, 28%, 81%);
+
+  --ff-primary: 'Outfit', sans-serif;
+  --ff-body: var(--ff-primary);
+  --ff-accent: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+
+  --fs-300: 0.9375rem;
+  --fs-400: 1.25rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.2;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--clr-neutral-900);
+  position: relative;
+}
+
+.card {
+  background-color: var(--clr-neutral-100);
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: fit-content;
+  padding: 1rem 1rem 1rem 1rem;
+  text-align: center;
+  gap: 1rem;
+  border-radius: 1.25rem;
+  box-shadow: 0.5rem 0.5rem 1.5rem var(--clr-neutral-800);
+}
+
+.card h1 {
+  font-size: var(--fs-400);
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-400);
+  padding: 0.5rem;
+  padding-top: 1rem;
+}
+
+.card p {
+  font-size: var(--fs-300);
+  font-family: var(--ff-accent);
+  color: var(--clr-primary-300);
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.card img {
+  border-radius: 0.75rem;
+}
